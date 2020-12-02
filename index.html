@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rock Paper Scissors</title>
   <meta charset="UTF-8"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div>
+        <button id="Rock">Rock</button>
+        <button id="Paper">Paper</button>
+        <button id="Scissors">Scissors</button>
+    </div>
+
+
   <script>
+
     var choice = ["Rock", "Paper", "Scissors"];
     var playerWins = 0;
     var computerWins = 0;
@@ -20,29 +29,30 @@
     function computerPlay() {
         return getRandomArrayElement(choice);
     }
+    
 
     function playRound(playerSelection, computerSelection) {
-        if (playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "scissors") {
+        if (playerSelection == "Rock" && computerSelection == "Scissors") {
             playerWins ++;
             return "You Win! Rock beats scissors.";
         }
-        else if (playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "paper") {
+        else if (playerSelection == "Rock" && computerSelection == "Paper") {
             computerWins ++;
             return "You Lose! Paper beats rock.";
         }
-        else if (playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "rock") {
+        else if (playerSelection == "Paper" && computerSelection == "Rock") {
             playerWins++;
             return "You Win! Paper beats rock.";
         }
-        else if (playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "scissors") {
+        else if (playerSelection == "Paper" && computerSelection == "Scissors") {
             computerWins++;
             return "You Lose! Scissors beats paper.";
         }
-        else if (playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "paper") {
+        else if (playerSelection == "Scissors" && computerSelection == "Paper") {
             playerWins++;
             return "You Win! Scissors beats paper.";
         }
-        else if (playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "rock") {
+        else if (playerSelection == "Scissors" && computerSelection == "Rock") {
             computerWins++;
             return "You Lose! Rock beats scissors.";
         }
@@ -50,6 +60,16 @@
             return "Tie!";
         }
     }
+
+
+    const buttons = document.querySelectorAll('button');
+    
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            var computerSelection = computerPlay();
+            alert(playRound(button.id, computerSelection));
+        });
+    });
 
   </script>
 </body>
