@@ -1,10 +1,13 @@
 .wrapper {
     display: flex;
+    flex: 1;
     position: relative;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 100vh;
     background: url('https://i.pinimg.com/originals/a2/02/ff/a202ff44bf1c6d539eb954e916c796a2.jpg') bottom center;
     border: 0;
+    opacity: .95;
 }
   
 .score {
@@ -12,24 +15,24 @@
     background-color: rgb(165, 165, 165);
     margin: auto;
     width: 40%;
+    min-width: 75vh;
     align-items: center;
     justify-content: center;
     border-radius: 2%;
     min-height: 10vh;
+    border: .4rem solid black;
 }
 
-
 .key {
-    display: flex;
-    border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    width: 10rem;
+    border: 1vh solid black;
+    border-radius: 1vh;
+    margin: 2vh 2vh 2vh 2vh; 
+    font-size: 3vh;
+    padding: 1vh .5vh;
+    width: 50vh;
     text-align: center;
+    text-justify: center;
     color: white;
     background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 .5rem black;
+    text-shadow: 0 0 .5vh black;
   }
