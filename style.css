@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('https://i.pinimg.com/originals/a2/02/ff/a202ff44bf1c6d539eb954e916c796a2.jpg') bottom center;
+    border: 0;
+}
+  
+.score {
+    display: flex;
+    background-color: rgb(165, 165, 165);
+    margin: auto;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2%;
+    min-height: 10vh;
+}
+
+
+.key {
+    display: flex;
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+  }
